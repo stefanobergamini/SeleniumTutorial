@@ -28,8 +28,9 @@ try:
     for title in titles:
         name = title.find_element_by_class_name("v-align-middle")
         print(name.text)
-finally:
+
+except:
     print("The End")
     driver.quit()
 
-
+driver.quit()
