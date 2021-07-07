@@ -14,16 +14,16 @@ driver.maximize_window()
 link = driver.find_element_by_link_text("Team")
 link.click()
 
+
 try:
     print("hey oh")
     div_login_button = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.CLASS_NAME, "btn-mktg color-text-white"))
+        EC.visibility_of_all_elements_located((By.CSS_SELECTOR, ".btn-mktg.color-text-white"))
     )
     print("pass the wait")
-    print(div_login_button)
-    login_button = div_login_button.find_element_by_class_name("btn-mktg color-text-white")
+    print(div_login_button[0])
+    div_login_button[0].click()
 
-    login_button.click()
 
 except:
     print("The End")
