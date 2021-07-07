@@ -24,8 +24,12 @@ try:
     print(div_login_button[0])
     div_login_button[0].click()
 
+    driver.back()
+    driver.back()
+    time.sleep(3)
 
 except:
     print("The End")
     driver.quit()
 
+driver.quit()
